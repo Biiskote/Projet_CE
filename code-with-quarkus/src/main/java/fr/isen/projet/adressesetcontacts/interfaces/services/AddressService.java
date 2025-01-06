@@ -10,7 +10,7 @@ public interface AddressService {
 //begin of modifiable zone(Javadoc).......C/4d794fcc-45fb-4dfb-b569-0776ec18e920
 
 //end of modifiable zone(Javadoc).........E/4d794fcc-45fb-4dfb-b569-0776ec18e920
-    AddressModel createAddress(final AddressModel adresse);
+    AddressModel createAddress(final AddressModel address);
 
 //begin of modifiable zone(Javadoc).......C/f5c46c96-557a-49d1-bb79-e026bb976c6e
 

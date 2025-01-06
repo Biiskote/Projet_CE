@@ -1,5 +1,6 @@
 package fr.isen.projet.adressesetcontacts.interfaces.models;
 
+import java.util.Date;
 
 //begin of modifiable zone(Javadoc).......C/d68136aa-c448-4053-b345-564deebf5f52
 
@@ -39,5 +40,20 @@ public class ContactModel {
 
 //end of modifiable zone(Javadoc).........E/e2aa7506-0cbf-4b3f-8821-bb48fec2ef60
     private String buisness_phone;
+
+//begin of modifiable zone(Javadoc).......C/e7be11f0-f6c5-4530-8610-a2650a4eca84
+
+//end of modifiable zone(Javadoc).........E/e7be11f0-f6c5-4530-8610-a2650a4eca84
+    private Date creation_date;
+
+//begin of modifiable zone(Javadoc).......C/9cb71f05-7c89-4d66-88eb-5c27087abfb8
+
+//end of modifiable zone(Javadoc).........E/9cb71f05-7c89-4d66-88eb-5c27087abfb8
+    private Date update_date;
+
+//begin of modifiable zone(Javadoc).......C/2e83f12f-29fa-4e53-a4c5-b24ab3072cd2
+
+//end of modifiable zone(Javadoc).........E/2e83f12f-29fa-4e53-a4c5-b24ab3072cd2
+    private boolean deleted;
 
 }
