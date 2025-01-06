@@ -1,4 +1,4 @@
-package fr.isen.projet;
+package fr.isen.projet.addressesetcontacts;
 
 
 import java.util.HashMap;
