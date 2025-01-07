@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS `contactsaddressesbdd`;
-USE `contactsaddressesbdd`;
-CREATE TABLE IF NOT EXISTS `ContactModel` (
+CREATE DATABASE IF NOT EXISTS `contacts_addresses`;
+USE `contacts_addresses`;
+CREATE TABLE IF NOT EXISTS `contact_model` (
   `uuid` VARCHAR(1024),
   `name` VARCHAR(1024),
   `first_name` VARCHAR(1024),
@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `ContactModel` (
   `work_phone` BIGINT
 );
 
-INSERT INTO `ContactModel` (`uuid`,`name`,`first_name`,`email`,`personal_phone`,`function`,`work_phone`)
+INSERT INTO `contact_model` (`uuid`,`name`,`first_name`,`email`,`personal_phone`,`function`,`work_phone`)
 VALUES
 ('a8dff5c7-8d88-4fcb-8d24-e4a09de05e36','Dupont','Jean','jean.dupont@example.com',601020304,'Développeur',140234567),
 ('ecb9d879-9a9b-4d85-b0b2-5867e827efb9','Martin','Sophie','sophie.martin@example.com',612345678,'Responsable RH',148765432),
@@ -199,7 +199,7 @@ VALUES
 ('a7c0f3b4-7b95-40e9-9b77-e2ad54a8b29e','Mason','Ethan','ethan.mason@example.com',687452369,'Responsable Commercial',145619723),
 ('5f7c6d2d-d2c8-4c42-bb7b-739f7c8fdb92','Grant','Charlotte','charlotte.grant@example.com',612346578,'Directeur IT',158274930);
 
-CREATE TABLE IF NOT EXISTS `AddressModel` (
+CREATE TABLE IF NOT EXISTS `address_model` (
   `uuid` VARCHAR(1024),
   `number` BIGINT,
   `street` VARCHAR(1024),
@@ -210,7 +210,7 @@ CREATE TABLE IF NOT EXISTS `AddressModel` (
   `additional_information` VARCHAR(1024)
 );
 
-INSERT INTO `AddressModel` (`uuid`,`number`,`street`,`postal_code`,`city`,`country`,`address_complement`,`additional_information`)
+INSERT INTO `address_model` (`uuid`,`number`,`street`,`postal_code`,`city`,`country`,`address_complement`,`additional_information`)
 VALUES
 ('a8dff5c7-8d88-4fcb-8d24-e4a09de05e36',10,'Rue des Acacias',75001,'Paris','France','Appartement 12','Résidence sécurisée'),
 ('ecb9d879-9a9b-4d85-b0b2-5867e827efb9',25,'Avenue de la République',69001,'Lyon','France','Bâtiment B','Près du parc'),
