@@ -1,4 +1,4 @@
-package org.acme;
+package fr.isen.projet.adressesetcontacts.interfaces.models;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
