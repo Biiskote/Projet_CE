@@ -14,12 +14,12 @@ public class AddressModel {
 //begin of modifiable zone(Javadoc).......C/77688b5a-b834-47cf-abde-3ba4fc251b5a
 
 //end of modifiable zone(Javadoc).........E/77688b5a-b834-47cf-abde-3ba4fc251b5a
-    private int unit_number;
+    private int number;
 
 //begin of modifiable zone(Javadoc).......C/a462cf0f-91b2-42dd-aaa3-2505346269fc
 
 //end of modifiable zone(Javadoc).........E/a462cf0f-91b2-42dd-aaa3-2505346269fc
-    private String street_name;
+    private String street;
 
 //begin of modifiable zone(Javadoc).......C/f44db4f9-f140-4e10-aa7f-a01fb1107700
 
@@ -56,4 +56,85 @@ public class AddressModel {
 //end of modifiable zone(Javadoc).........E/e06d6d1c-d840-46e1-b27e-1e3d0d42f319
     private boolean deleted;
 
+    // Getters and Setters
+
+    public String getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
+    }
+
+    public int getUnitNumber() {
+        return number;
+    }
+
+    public void setUnitNumber(int number) {
+        this.number = number;
+    }
+
+    public String getStreetName() {
+        return street;
+    }
+
+    public void setStreetName(String street) {
+        this.street = street;
+    }
+
+    public String getPostalCode() {
+        return postal_code;
+    }
+
+    public void setPostalCode(String postal_code) {
+        this.postal_code = postal_code;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getAdditionalInformation() {
+        return additional_information;
+    }
+
+    public void setAdditionalInformation(String additional_information) {
+        this.additional_information = additional_information;
+    }
+
+    public Date getCreationDate() {
+        return creation_date;
+    }
+
+    public void setCreationDate(Date creation_date) {
+        this.creation_date = creation_date;
+    }
+
+    public Date getUpdateDate() {
+        return update_date;
+    }
+
+    public void setUpdateDate(Date update_date) {
+        this.update_date = update_date;
+    }
+
+    public boolean isDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(boolean deleted) {
+        this.deleted = deleted;
+    }
 }

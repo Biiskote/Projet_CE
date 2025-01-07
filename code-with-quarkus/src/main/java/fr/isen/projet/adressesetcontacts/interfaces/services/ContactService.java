@@ -2,7 +2,6 @@ package fr.isen.projet.adressesetcontacts.interfaces.services;
 
 import java.util.List;
 import fr.isen.projet.adressesetcontacts.interfaces.models.ContactModel;
-import fr.isen.projet.adressesetcontacts.interfaces.models.ContactSearchCriteria;
 
 //begin of modifiable zone(Javadoc).......C/c6b8fe40-c7fd-4854-8d65-13ced3ee4714
 
@@ -21,7 +20,7 @@ public interface ContactService {
 //begin of modifiable zone(Javadoc).......C/5d66ee0e-740c-49b8-895d-541e7a2361e7
 
 //end of modifiable zone(Javadoc).........E/5d66ee0e-740c-49b8-895d-541e7a2361e7
-    List<ContactModel> getAllContacts(final ContactSearchCriteria Parameter);
+    List<ContactModel> getAllContacts();
 
 //begin of modifiable zone(Javadoc).......C/77b62e6f-3948-4315-a6e3-060b98559f55
 
