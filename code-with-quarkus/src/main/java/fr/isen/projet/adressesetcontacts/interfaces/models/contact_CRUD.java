@@ -42,13 +42,14 @@ public class contact_CRUD {
     // Endpoint pour mettre à jour un contact existant
     @PUT
     @Path("/{uuid}")
-    public Response updateContact(@PathParam("uuid") String uuid, String updatedContact) {
-        ContactModel contact = contactService.updateContact(uuid, updatedContact);
-        if (contact == null) {
-            return Response.status(Response.Status.NOT_FOUND).entity("Contact non trouvé").build();
-        }
-        return Response.ok(contact).build();
+    public Response updateContact(@PathParam("uuid") String uuid, ContactModel updatedContact) {
+    ContactModel contact = contactService.updateContact(uuid, updatedContact);
+    if (contact == null) {
+        return Response.status(Response.Status.NOT_FOUND).entity("Contact non trouvé").build();
     }
+    return Response.ok(contact).build();
+    }
+
 
     // Endpoint pour supprimer un contact par son UUID
     @DELETE

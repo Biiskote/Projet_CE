@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import fr.isen.projet.adressesetcontacts.interfaces.models.AddressModel;
 import fr.isen.projet.adressesetcontacts.interfaces.models.ContactModel;
 import io.agroal.api.AgroalDataSource;
 
@@ -87,55 +88,28 @@ public class ContactServiceImpl implements ContactService {
     }
 
     @Override
-    public ContactModel updateContact(String uuid, String contact) {
-        // Supposons que 'contact' est une chaîne contenant les informations sous forme de "id_address,name,first_name,email,personal_phone,job,work_phone"
-        String[] contactParts = contact.split(",");
-
-        if (contactParts.length != 7) {
-            throw new IllegalArgumentException("Contact string does not have the correct format");
-        }
-
-        String id_address = contactParts[0];
-        String name = contactParts[1];
-        String first_name = contactParts[2];
-        String email = contactParts[3];
-        String personal_phone = contactParts[4];
-        String job = contactParts[5];
-        String work_phone = contactParts[6];
-
-        String sql = "UPDATE contact_model SET id_address = ?, name = ?, first_name = ?, email = ?, personal_phone = ?, job = ?, work_phone = ? WHERE uuid = ?";
+    public ContactModel updateContact(String uuid, ContactModel updatedContact) {
+        String sql = "UPDATE contact_model SET name = ?, first_name = ?, email = ?, personal_phone = ?, job = ?, work_phone = ?, id_address = ? WHERE uuid = ?";
         try (Connection conn = dataSource.getConnection();
             PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, id_address);
-            stmt.setString(2, name);
-            stmt.setString(3, first_name);
-            stmt.setString(4, email);
-            stmt.setString(5, personal_phone);
-            stmt.setString(6, job);
-            stmt.setString(7, work_phone);
+            stmt.setString(1, updatedContact.getName());
+            stmt.setString(2, updatedContact.getFirstname());
+            stmt.setString(3, updatedContact.getEmail());
+            stmt.setString(4, updatedContact.getPersonalPhone());
+            stmt.setString(5, updatedContact.getFunction());
+            stmt.setString(6, updatedContact.getBuisnessPhone());
+            stmt.setString(7, updatedContact.getIdAddress());
             stmt.setString(8, uuid);
-            
             int rowsAffected = stmt.executeUpdate();
             if (rowsAffected == 0) {
                 throw new RuntimeException("No contact found with UUID: " + uuid);
             }
-
-            // Retourner un objet ContactModel mis à jour
-            ContactModel updatedContact = new ContactModel();
-            updatedContact.setUuid(uuid);
-            updatedContact.setIdAddress(id_address);
-            updatedContact.setName(name);
-            updatedContact.setFirstname(first_name);
-            updatedContact.setEmail(email);
-            updatedContact.setPersonalPhone(personal_phone);
-            updatedContact.setFunction(job);
-            updatedContact.setBuisnessPhone(work_phone);
-            
             return updatedContact;
         } catch (SQLException e) {
             throw new RuntimeException("Error updating contact", e);
         }
     }
+
 
 
     @Override

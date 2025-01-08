@@ -25,7 +25,7 @@ public interface ContactService {
 //begin of modifiable zone(Javadoc).......C/77b62e6f-3948-4315-a6e3-060b98559f55
 
 //end of modifiable zone(Javadoc).........E/77b62e6f-3948-4315-a6e3-060b98559f55
-    ContactModel updateContact(final String uuid, final String contact);
+    ContactModel updateContact(final String uuid, ContactModel updatedContact);
 
 //begin of modifiable zone(Javadoc).......C/9f37b3e7-870a-4010-98d6-1bb724a5bf07
 
