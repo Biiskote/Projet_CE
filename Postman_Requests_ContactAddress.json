@@ -1,0 +1,432 @@
+{
+	"info": {
+		"_postman_id": "07d4c3d4-1590-4428-9e40-37cca14cc192",
+		"name": "Test Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30097134"
+	},
+	"item": [
+		{
+			"name": "Tests",
+			"item": [
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "Toutes les addresses",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/addresses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"addresses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Une address precise",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/addresses/a8dff5c7-8d88-4fcb-8d24-e4a09de05e36",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"addresses",
+										"a8dff5c7-8d88-4fcb-8d24-e4a09de05e36"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Touts les contacts",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/contacts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"contacts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Un contact precis",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/contacts/a8dff5c7-8d88-4fcb-jklo-e4a09de05e36",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"contacts",
+										"a8dff5c7-8d88-4fcb-jklo-e4a09de05e36"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Recherche 3 Digit",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/contacts/search/jea",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"contacts",
+										"search",
+										"jea"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "Ajouter une address",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"uuid\": \"votre_uuid\",\r\n        \"city\": \"ville\",\r\n        \"country\": \"pays\",\r\n        \"streetName\": \"rue\",\r\n        \"additionalInformation\": \"info_complementaires\",\r\n        \"unitNumber\": 0,\r\n        \"postalCode\": \"code_postal\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/addresses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"addresses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Ajouter un contact",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"uuid\": \"votre_uuid\",\r\n    \"idAddress\": \"uuid_de_id_address\",\r\n    \"name\": \"votre_nom\",\r\n    \"firstname\": \"votre_prenom\",\r\n    \"email\": \"prenom.nom@example.com\",\r\n    \"personalPhone\": \"000000000\",\r\n    \"function\": \"nom_profession\",\r\n    \"buisnessPhone\": \"000000000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/contacts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"contacts"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PUT",
+					"item": [
+						{
+							"name": "Modifier un contact",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"uuid\": \"votre_uuid\",\r\n    \"idAddress\": \"uuid_de_id_address_modifie\",\r\n    \"name\": \"votre_nom_modifie\",\r\n    \"firstname\": \"votre_prenom_modifie\",\r\n    \"email\": \"prenom.nom@example.com\",\r\n    \"personalPhone\": \"000000000\",\r\n    \"function\": \"nom_profession_modifie\",\r\n    \"buisnessPhone\": \"000000000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/contacts/votre_uuid",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"contacts",
+										"votre_uuid"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modifier une address",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"uuid\": \"votre_uuid\",\r\n        \"city\": \"ville_modifie\",\r\n        \"country\": \"pays_modifie\",\r\n        \"streetName\": \"rue_modifie\",\r\n        \"additionalInformation\": \"info_complementaires_modifie\",\r\n        \"unitNumber\": 0,\r\n        \"postalCode\": \"code_postal_modifie\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/addresses/votre_uuid",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"addresses",
+										"votre_uuid"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"item": [
+						{
+							"name": "Supprimer un contact",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/contacts/votre_uuid",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"contacts",
+										"votre_uuid"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Supprimer une address",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/addresses/votre_uuid",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"addresses",
+										"votre_uuid"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
